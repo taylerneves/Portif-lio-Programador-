@@ -11,15 +11,15 @@
     <title>Portfólio do Tayler</title>
 </head>
 
-<body>
+<body class="escuro">
     <header>
         <nav id="menu">
             <ul>
-                <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-brain"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-graduation-cap"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-trowel-bricks"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-address-card"></i></a></li>
+                <li><a href="#ficha" class="link"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#skills" class="link"><i class="fa-solid fa-brain"></i></a></li>
+                <li><a href="#formacao" class="link"><i class="fa-solid fa-graduation-cap"></i></a></li>
+                <li><a href="#projetos" class="link"><i class="fa-solid fa-trowel-bricks"></i></a></li>
+                <li><a href="javascript:void(0)" id="botao-tema"><i class="fa-solid fa-moon"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -34,14 +34,22 @@
                 Estudante de Sistemas de Informação, apaixonado por tecnologia,
                 programação e criação de conteúdos digitais. Sempre buscando aprender
                 e evoluir no desenvolvimento web.
+                <br>
+                Tenho o sonho de conhecer o mundo!!
             </p>
 
             <div id="social">
-                <a href="#" target="_blank" class="fa-brands fa-linkedin-in"></a>
-                <a href="#" target="_blank" class="fa-brands fa-github"></a>
-                <a href="#" target="_blank" class="fa-brands fa-instagram"></a>
-                <a href="#" class="fa-solid fa-envelope"></a>
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" target="_blank"
+                    class="fa-brands fa-linkedin-in"></a>
+                <a href="https://github.com/taylerneves" target="_blank" class="fa-brands fa-github"></a>
+                <a href="https://www.instagram.com/tayler__n__p/" target="_blank" class="fa-brands fa-instagram"></a>
+                <a href="javascript:void(0)" onclick="copiarEmail()" title="Copiar e-mail"
+                    style="display: inline-block; transform: translateY(-7px);">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
             </div>
+
+            <div id="alerta-copiado" class="alerta-sucesso">E-mail copiado!</div>
         </section>
         <section id="detalhes">
 
@@ -112,70 +120,80 @@
 
             </article> <!-- Fim article#formacao -->
 
-           <article id="projetos">
-    <h2><i class="fa-solid fa-folder-open"></i> Projetos</h2>
+            <article id="projetos">
+                <h2><i class="fa-solid fa-folder-open"></i> Projetos</h2>
 
-    <div class="projetos-container">
+                <div class="projetos-container">
 
-        <div class="projeto-card">
-            <div class="iframe-wrapper">
-                <iframe src="https://taylerneves.github.io/Fanta-Site-com-anima-o-de-movimento-/" scrolling="no"></iframe>
-            </div>
-            <div class="projeto-info">
-                <h3>Site Fanta Animado</h3>
-                <p>Site interativo com animações utilizando JavaScript, criando uma experiência visual dinâmica e moderna.</p>
-                <a href="https://taylerneves.github.io/Fanta-Site-com-anima-o-de-movimento-/" target="_blank" class="btn">Saiba mais</a>
-            </div>
-        </div>
+                    <div class="projeto-card">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://taylerneves.github.io/Fanta-Site-com-anima-o-de-movimento-/"
+                                scrolling="no"></iframe>
+                        </div>
+                        <div class="projeto-info">
+                            <h3>Site Fanta Animado</h3>
+                            <p>Site interativo com animações utilizando JavaScript, criando uma experiência visual
+                                dinâmica e moderna.</p>
+                            <a href="https://taylerneves.github.io/Fanta-Site-com-anima-o-de-movimento-/"
+                                target="_blank" class="btn">Saiba mais</a>
+                        </div>
+                    </div>
 
-        <div class="projeto-card">
-            <div class="iframe-wrapper">
-                <iframe src="https://taylerneves.github.io/Tela-de-login/" scrolling="no"></iframe>
-            </div>
-            <div class="projeto-info">
-                <h3>Tela de Login</h3>
-                <p>Interface de login desenvolvida com HTML e CSS, com foco em design moderno e responsivo.</p>
-                <a href="https://taylerneves.github.io/Tela-de-login/" target="_blank" class="btn">Saiba mais</a>
-            </div>
-        </div>
+                    <div class="projeto-card">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://taylerneves.github.io/Tela-de-login/" scrolling="no"></iframe>
+                        </div>
+                        <div class="projeto-info">
+                            <h3>Tela de Login</h3>
+                            <p>Interface de login desenvolvida com HTML e CSS, com foco em design moderno e responsivo.
+                            </p>
+                            <a href="https://taylerneves.github.io/Tela-de-login/" target="_blank" class="btn">Saiba
+                                mais</a>
+                        </div>
+                    </div>
 
-        <div class="projeto-card">
-            <div class="iframe-wrapper">
-                <iframe src="https://taylerneves.github.io/As-redes-do-meu-amor/" scrolling="no"></iframe>
-            </div>
-            <div class="projeto-info">
-                <h3>Central de Redes</h3>
-                <p>Página para centralizar links de redes sociais com layout limpo e intuitivo.</p>
-                <a href="https://taylerneves.github.io/As-redes-do-meu-amor/" target="_blank" class="btn">Saiba mais</a>
-            </div>
-        </div>
+                    <div class="projeto-card">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://taylerneves.github.io/As-redes-do-meu-amor/" scrolling="no"></iframe>
+                        </div>
+                        <div class="projeto-info">
+                            <h3>Central de Redes</h3>
+                            <p>Página para centralizar links de redes sociais com layout limpo e intuitivo.</p>
+                            <a href="https://taylerneves.github.io/As-redes-do-meu-amor/" target="_blank"
+                                class="btn">Saiba mais</a>
+                        </div>
+                    </div>
 
-        <div class="projeto-card">
-            <div class="iframe-wrapper">
-                <iframe src="https://taylerneves.github.io/Cart-o-dela/" scrolling="no"></iframe>
-            </div>
-            <div class="projeto-info">
-                <h3>Carta Interativa</h3>
-                <p>Projeto criativo simulando uma carta digital com foco em design e experiência do usuário.</p>
-                <a href="https://taylerneves.github.io/Cart-o-dela/" target="_blank" class="btn">Saiba mais</a>
-            </div>
-        </div>
+                    <div class="projeto-card">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://taylerneves.github.io/Cart-o-dela/" scrolling="no"></iframe>
+                        </div>
+                        <div class="projeto-info">
+                            <h3>Carta Interativa</h3>
+                            <p>Projeto criativo simulando uma carta digital com foco em design e experiência do usuário.
+                            </p>
+                            <a href="https://taylerneves.github.io/Cart-o-dela/" target="_blank" class="btn">Saiba
+                                mais</a>
+                        </div>
+                    </div>
 
-        <div class="projeto-card">
-            <div class="iframe-wrapper">
-                <iframe src="https://taylerneves.github.io/blog-dela/" scrolling="no"></iframe>
-            </div>
-            <div class="projeto-info">
-                <h3>Blog</h3>
-                <p>Estrutura de blog com organização de conteúdo e layout focado em leitura.</p>
-                <a href="https://taylerneves.github.io/blog-dela/" target="_blank" class="btn">Saiba mais</a>
-            </div>
-        </div>
+                    <div class="projeto-card">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://taylerneves.github.io/blog-dela/" scrolling="no"></iframe>
+                        </div>
+                        <div class="projeto-info">
+                            <h3>Blog</h3>
+                            <p>Estrutura de blog com organização de conteúdo e layout focado em leitura.</p>
+                            <a href="https://taylerneves.github.io/blog-dela/" target="_blank" class="btn">Saiba
+                                mais</a>
+                        </div>
+                    </div>
 
-    </div>
-</article>
+                </div>
+            </article>
         </section>
     </main>
 </body>
+<script src="script.js"></script>
 
 </html>
