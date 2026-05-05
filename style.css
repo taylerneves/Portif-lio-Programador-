@@ -171,6 +171,231 @@ article {
 #skills h2 {
     margin-bottom: 20px;
 }
+/* Seção Formação (fundo escuro pra contraste) */
+#formacao {
+    padding: 40px;
+    background-color: var(--texto); /* escuro */
+    color: var(--texto-inverso);
+}
+
+/* Título */
+#formacao h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Container */
+#formacao-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card de curso (claro) */
+.curso {
+    background-color: var(--fundo-card);
+    color: var(--texto);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid #e2e8f0;
+}
+
+/* Hover */
+.curso:hover {
+    transform: translateY(-5px);
+    border-color: var(--destaque);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Período */
+.periodo {
+    font-size: 14px;
+    color: var(--destaque);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Instituição */
+.instituicao {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Titulação */
+.titulacao {
+    font-size: 14px;
+    color: #475569;
+}
+
+/* PROJETOS */
+#projetos {
+    margin-top: 30px;
+}
+
+/* GRID */
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.projeto-card {
+    background-color: var(--fundo-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid #e2e8f0;
+    position: relative;
+}
+
+/* HOVER */
+.projeto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* IFRAME */
+.projeto-card iframe {
+    width: 100%;
+    height: 180px;
+    border: none;
+    pointer-events: none; /* evita bugs ao interagir */
+}
+
+/* (CASO USE IMAGEM EM VEZ DE IFRAME) */
+.projeto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+/* ZOOM NA IMAGEM */
+.projeto-card:hover img {
+    transform: scale(1.05);
+}
+
+/* INFO */
+.projeto-info {
+    padding: 15px;
+}
+
+/* TÍTULO */
+.projeto-info h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+/* DESCRIÇÃO */
+.projeto-info p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #475569;
+    line-height: 1.4;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.projeto-card .iframe-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+/* HOVER BOTÃO */
+.btn:hover {
+    background-color: var(--destaque-inverso);
+}
+/* Container Geral */
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* O Card */
+.projeto-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* A Moldura (Janela de Visualização) */
+.iframe-wrapper {
+    width: 100%;
+    height: 200px; /* Altura da 'imagem' no card */
+    position: relative;
+    overflow: hidden; /* Corta o resto do site */
+    background: #f4f4f4;
+}
+
+/* O Iframe Ajustado para o Início */
+.iframe-wrapper iframe {
+    width: 900px; /* Largura de desktop */
+    height: 700px; /* Altura interna maior para carregar o topo */
+    border: none;
+    pointer-events: none;
+    
+    position: absolute;
+    top: 0;      /* Garante que comece no pixel 0 do site */
+    left: 50%;
+    
+    /* Mágica: Scale 0.35 para o conteúdo ficar legível e transform-origin no TOP */
+    transform: translateX(-50%) scale(0.35); 
+    transform-origin: top center; /* CRUCIAL: Mantém o topo colado no topo */
+    
+    display: block;
+}
+
+/* Informações */
+.projeto-info {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #7b2ff7;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #ficha {
+        text-align: center;
+    }
+}
+/*Porjetos*/
 
 
 @media screen and (min-width: 760px) {
