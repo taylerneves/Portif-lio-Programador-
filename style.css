@@ -237,10 +237,7 @@ article {
 }
 
 /* HOVER (detalhe premium) */
-#skills .item:hover .progresso {
-    background: var(--destaque-inverso);
 
-}
 
 #skills h2 {
     margin-bottom: 20px;
