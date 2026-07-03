@@ -43,7 +43,7 @@ navLinks.forEach(link => {
         }
     });
 });function copiarEmail() {
-            const email = "seuemail@exemplo.com";
+            const email = "taylernevespolletti@gmail.com";
             navigator.clipboard.writeText(email);
 
             const alerta = document.getElementById("alerta-copiado");
