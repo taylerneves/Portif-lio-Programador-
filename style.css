@@ -497,55 +497,6 @@ section#ficha p {
 
 /* O Iframe Ajustado para o Início */
 .iframe-wrapper iframe {
-    width: 900px;
-    /* Largura de desktop */
-    height: 700px;
-    /* Altura interna maior para carregar o topo */
-    border: none;
-    pointer-events: none;
-
-    position: absolute;
-    top: 0;
-    /* Garante que comece no pixel 0 do site */
-    left: 50%;
-
-    /* Mágica: Scale 0.35 para o conteúdo ficar legível e transform-origin no TOP */
-    transform: translateX(-50%) scale(0.35);
-    transform-origin: top center;
-    /* CRUCIAL: Mantém o topo colado no topo */
-
-    display: block;
-}
-
-/* Informações */
-.projeto-info {
-    padding: 20px;
-    border-top: 1px solid #eee;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #7b2ff7;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-
-    #ficha {
-        text-align: center;
-    }
-}
-
-.iframe-wrapper iframe {
     width: 1100px;
     /* Largura de desktop */
     height: 700px;
@@ -699,30 +650,53 @@ section#ficha p {
     .projeto-card {
         flex-direction: row;
         /* Coloca um ao lado do outro */
-        align-items: center;
-        /* Centraliza verticalmente */
+        align-items: flex-start;
+        /* Alinha no topo, sem espaços extras */
         height: auto;
     }
 
-    .iframe-wrapper {
+.iframe-wrapper {
         width: 40%;
         /* Define que a imagem/iframe ocupa 40% da largura */
         height: 160px;
-        /* Reduz a altura para não ficar muito comprido */
+        /* Fixo para o absolute funcionar */
         flex-shrink: 0;
         /* Impede que a imagem esmague */
+        line-height: 0;
+        font-size: 0;
     }
 
     /* Ajuste do Iframe dentro do mobile para caber no espaço menor */
     .iframe-wrapper iframe {
-    display: block;        /* Remove o comportamento de texto/linha */
-    vertical-align: bottom; /* Reforça o alinhamento na base */
-}
+        width: 800px;
+        height: 500px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(0.32);
+        transform-origin: top center;
+        border: none;
+        pointer-events: none;
+    }
 
     .projeto-info {
         width: 60%;
         /* Texto ocupa os outros 60% */
         padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .projeto-info .btn {
+        order: 2;
+    }
+
+    .projeto-info .tag-animacao {
+        margin-left: 0;
+        order: 1;
     }
 
     .projeto-info h3 {
@@ -743,5 +717,66 @@ section#ficha p {
     .btn {
         padding: 5px 10px;
         font-size: 12px;
+    }
+}
+
+/* Ajuste para telas muito pequenas (ex: 360x740) */
+@media screen and (max-width: 360px) {
+    .projeto-card {
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+    }
+
+    .iframe-wrapper {
+        width: 40%;
+        height: 120px;
+        flex-shrink: 0;
+        background: var(--fundo-card);
+        line-height: 0;
+        font-size: 0;
+    }
+
+    .iframe-wrapper iframe {
+        width: 800px;
+        height: 500px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(0.24);
+        transform-origin: top center;
+        border: none;
+        pointer-events: none;
+    }
+
+    .projeto-info {
+        width: 60%;
+        padding: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .projeto-info .tag-animacao {
+        margin-left: 0;
+    }
+
+    .projeto-info h3 {
+        font-size: 14px;
+    }
+
+    .projeto-info p {
+        font-size: 11px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .btn {
+        padding: 4px 8px;
+        font-size: 11px;
     }
 }
