@@ -390,11 +390,12 @@ section#ficha p {
     display: inline-block;
     padding: 8px 14px;
     background-color: var(--destaque);
-    color: var(--texto-inverso);
+    color: var(--fundo-principal);
     text-decoration: none;
     border-radius: 6px;
     font-size: 14px;
     transition: 0.3s;
+   
 }
 
 .projeto-card .iframe-container {
@@ -434,6 +435,12 @@ section#ficha p {
 }
 
 /* HOVER BOTÃO */
+body.escuro .btn {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #7c3aed; /* mantém o roxo original, não muda no escuro */
+}
+
 .btn:hover {
     background-color: var(--destaque-inverso);
 }
